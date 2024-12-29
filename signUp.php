@@ -12,7 +12,7 @@
 
 <body>
     <div class="logo">
-        <img src="codernaccotax.png" alt="">
+        <img src="codernaccotax.png" alt="CNAT">
     </div>
 
     <div class="container">
