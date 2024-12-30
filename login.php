@@ -18,17 +18,15 @@
             <div class="inputs">
                 <div class="single">
                     <label for="full-name" class="form-label">Enter Full Name</label>
-                    <input type="text" class="form-control" id="full-name" name="full-name" placeholder="Your_Name" required>
+                    <input type="text" class="form-control" id="full-name" name="full-name" required>
                 </div>
                 <div class="single">
                     <label for="password" class="form-label">Enter Password</label>
-                    <input type="password" class="form-control" id="password" name="user-password" placeholder="Your_Password"
-                        required>
+                    <input type="password" class="form-control" id="password" name="user-password" required>
                 </div>
                 <div class="single">
                     <label for="email" class="form-label">Enter Email</label>
-                    <input type="email" class="form-control" id="email" name="user-email" placeholder="Your_Email"
-                        required>
+                    <input type="email" class="form-control" id="email" name="user-email" required>
                 </div>
             </div>
             <div class="button">
@@ -58,7 +56,7 @@ try {
         }
 
         $stmt = $pdo->prepare("SELECT fullName,userPassword,email FROM users WHERE fullName=? AND userPassword=? AND email=? ");
-        $stmt->execute([$fullName, $userPassword,$email]);
+        $stmt->execute([$fullName, $userPassword, $email]);
         $userInfo = $stmt->fetchAll();
         // print_r($userInfo);
         if ($userInfo) {
