@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+*::selection{
+    background-color: rgba(37, 37, 236, 0.856);
+    color:black;
+}
+input:invalid{
+}
+
 html,
 body {
     width: 100%;

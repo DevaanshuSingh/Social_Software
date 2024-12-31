@@ -1,0 +1,130 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* .users::-webkit-scrollbar {
+    width: 1vh100vh;
+}
+
+.users::-webkit-scrollbar-track {
+    background-color: rgb(211, 214, 224);
+}
+
+.users::-webkit-scrollbar-thumb {
+    background-color: rgb(59, 91, 230);
+    border-radius: 10%;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .9s ease;
+    transition: all 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    overscroll-behavior: none; 
+}
+
+.menu{
+    height: 100vh;
+    /* width: 20vw; */
+    background-color: rgba(103, 171, 216, 0.548);
+}
+
+.container {
+    height: 100vh;
+    /* width: 80vw; */
+    background-color: rgba(255, 217, 0, 0.507);
+    /* border: 1px solid gold; */
+}
+
+.menu >.menu-button{
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: xx-large;
+    justify-content: space-evenly;
+    /* background-color: red; */
+
+    &>.menu-icon{
+        transform: rotate(180deg);
+        /* background-color: red; */
+    }
+
+    &>.menu-icon:hover, &>span{
+        color: blue;
+        cursor: pointer;
+    }
+}
+
+.users {
+    height: 25%;
+    width: 100%;
+    /* background-color: rgba(255, 0, 0, 0.356); */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-user-profile-section {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(65, 158, 65, 0.384);
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    overflow: scroll;
+    /* padding: .1%; */
+    overflow-y: hidden;
+}
+
+.show-user-profile-section::-webkit-scrollbar {
+    height: 0.5vh; /* Fixed height */
+    width: 0.8vh;  /* Defined width */
+}
+
+.show-user-profile-section::-webkit-scrollbar-track {
+    background: transparent; /* Track remains transparent */
+}
+
+.show-user-profile-section::-webkit-scrollbar-thumb {
+    background: rgba(0, 4, 255, 0.39); /* Thumb color */
+    border-radius: 10px; /* Smooth edges */
+}
+
+.show-user-profile-section::-webkit-scrollbar-thumb:active {
+    background: rgb(0, 4, 255); /* Darker thumb color when active */
+}
+
+
+.user-profile {
+    height: 95%;
+    width: 20%;
+    border: 1px solid black;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-rows: 1.5fr .5fr;
+}
+.user-profile > .user-profile-pic{
+    background-color: red;
+}
+
+.user-profile > .user-profile-name{
+    background-color: yellow;
+}
+
+.content {
+    min-height: 75%;
+    height: auto;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.411); */
+}
