@@ -12,7 +12,36 @@
 
 <body>
 
-    <div class="reading-section"></div>
+    <div class="reading-section">
+        <div class="about">
+            <div class="inner-content">
+                <div class="texts">
+                    <img src="codernaccotax.png" alt="CNAT_LOGO">
+                    <strong class="special-keys">CNAT(CODERNACCOTAX)</strong> Presents First Ever Social_Software!!<br>Here You Can Connect
+                    With People Easily, After Connecting You
+                    Can Share Your Experience, Daily_Routine, Intrests, Things You Love, You Want Anything. <strong
+                        class="special-keys">YES
+                        ANYTHING</strong>, And Even Without Being Connected Can Messeage Any Person <strong
+                        class="special-keys"><i>5 TIMES.</i></strong> Early Morning Or LAte Night OR Even Mid Of Day You
+                    Can Chat With People <strong class="special-keys">Anytime</strong>, <strong
+                        class="special-keys">Anywhere</strong>. It Does Not Limits You To Talk That You Are Inside Or
+                    Outiside Of Home. Here You Can Post Your Pictures, Expressions In Texts, Emojis Are Also Available
+                    Here. Another's Post Which You Like Can Express Your Feelings By Commenting Them Or Sending Them A
+                    Heart Or Many_More Options Are Here,
+                </div>
+            </div>
+        </div>
+        <div class="login-heading">
+            <h1>
+                <span><strong>LOGIN HERE:</strong></span>
+                <div class="face">
+                    O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--
+                    &nbsp;&nbsp;
+                </div>
+            </h1>
+        </div>
+    </div>
     <div class="container">
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="inputs">
@@ -38,6 +67,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        function wrongInput() {
+            document.querySelector('.login-heading h1').innerHTML = "0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;";
+            alert("Pleae Register First");
+        };
+
+        function correctInput() {
+            document.querySelector('.login-heading h1').innerHTML = "0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;";
+            alert("Welcome");
+        };
+    </script>
 </body>
 
 </html>
@@ -51,9 +91,9 @@ try {
         $userPassword = $_POST['user-password'];
         $email = $_POST['user-email'];
 
-        foreach ($_POST as $key => $posted) {
-            echo "$key: $posted<br>";
-        }
+        // foreach ($_POST as $key => $posted) {
+        //     echo "$key: $posted<br>";
+        // }
 
         $stmt = $pdo->prepare("SELECT fullName,userPassword,email FROM users WHERE fullName=? AND userPassword=? AND email=? ");
         $stmt->execute([$fullName, $userPassword, $email]);
@@ -61,12 +101,14 @@ try {
         // print_r($userInfo);
         if ($userInfo) {
             echo "<script>
-                    alert('Welcome " . strtoupper($fullName) . "');
-                    window.location.href = 'use.php';
+            correctInput();
+            setTimeout(() => {
+                window.location.href = 'use.php';
+            }, 1000);
                 </script>";
         } else {
             echo "<script>
-            alert('Please Register First');
+                wrongInput();
             </script>";
         }
     }
