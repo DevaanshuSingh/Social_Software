@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db   = 'social_software';
 $user = 'root';
-$pass = '';
+$pass = 'Alokesh123';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
