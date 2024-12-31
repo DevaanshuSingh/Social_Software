@@ -127,4 +127,58 @@ body {
     height: auto;
     width: 100%;
     /* background-color: rgba(0, 0, 0, 0.411); */
+    display: grid;
+    grid-template-rows: 10% 89%;
+    gap: 1%;
+
+    &>.my-section{
+        background-color: rgba(77, 153, 104, 0.664);
+        color: green;
+    }
+
+    &>.check{
+        background-color: black;
+    }
+}
+
+.my-section{
+    background-color: rgba(77, 153, 104, 0.664);
+    color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &>.search-post{
+        background-color: gold;
+        width: calc(100%/3);
+        height: 100%;
+    }
+
+    &>.post{
+        background-color: skyblue;
+        height: 100%;
+        width: calc(100%/3);
+    }
+
+    &>.my-profile{
+        background-color: rgba(159, 0, 0, 0.664);
+        height: 100%;
+        width: calc(100%/3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &>.my-name{
+            border: 1px solid black;
+            margin: 0 .2%;
+        }
+
+        &>img{
+            height: 100%;
+            width: 10%;
+            /* background-color: rebeccapurple; */
+            object-fit: contain;
+            margin: 0 .2%;
+        }
+    }
 }

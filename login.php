@@ -98,20 +98,27 @@ try {
         $userPassword = $_POST['user-password'];
         $email = $_POST['user-email'];
 
-        // foreach ($_POST as $key => $posted) {
-        //     echo "$key: $posted<br>";
-        // }
+        foreach ($_POST as $posted) {
+            echo "$posted<br>";
+        }
 
-        $stmt = $pdo->prepare("SELECT fullName,userPassword,email FROM users WHERE fullName=? AND userPassword=? AND email=? ");
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE fullName=? AND userPassword=? AND email=?;");
         $stmt->execute([$fullName, $userPassword, $email]);
         $userInfo = $stmt->fetchAll();
-        // print_r($userInfo);
+        $loggedId = $userInfo[0]['id'];
+        if(!empty($userInfo)){
+            print_r($userInfo);
+            echo "Is ".$loggedId;
+        }
+        else
+            echo "Empty Hai $loggedId";
         if ($userInfo) {
+            echo "<form id='subitTheForm' action='use.php' method='GET'>
+                    <input type='hidden' name='loggedPersonId' value='$loggedId'>
+                </form>";
             echo "<script>
             correctInput();
-            setTimeout(() => {
-                window.location.href = 'use.php';
-            }, 1000);
+                document.querySelector('#subitTheForm').submit();
                 </script>";
         } else {
             echo "<script>

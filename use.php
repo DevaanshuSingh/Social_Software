@@ -1,3 +1,18 @@
+<?php
+require_once 'config.php';
+
+$loggedId = $_GET['loggedPersonId'];
+
+$stmt = $pdo->prepare("SELECT * FROM users WHERE id =?;");
+$stmt->execute([$loggedId]);
+$me = $stmt->fetch();
+
+
+$get = $pdo->prepare("SELECT * FROM users;");
+$get->execute();
+$allUsers = $stmt->fetchAll();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -23,40 +38,34 @@
     <div class="users">
       <div class="show-user-profile-section">
 
-        <div class="user-profile">
-          <div class="user-profile-pic"></div>
-          <div class="user-profile-name"></div>
-        </div>
-        <div class="user-profile">
-          <div class="user-profile-pic"></div>
-          <div class="user-profile-name"></div>
-        </div>
-        <div class="user-profile">
-          <div class="user-profile-pic"></div>
-          <div class="user-profile-name"></div>
-        </div>
-        <div class="user-profile">
-          <div class="user-profile-pic"></div>
-          <div class="user-profile-name"></div>
-        </div>
-        <div class="user-profile">
-          <div class="user-profile-pic"></div>
-          <div class="user-profile-name"></div>
-        </div>
-        <div class="user-profile">
-          <div class="user-profile-pic"></div>
-          <div class="user-profile-name"></div>
-        </div>
-        <div class="user-profile">
-          <div class="user-profile-pic"></div>
-          <div class="user-profile-name"></div>
-        </div>
+      <?php
+// try{
+      // forEach($allUsers as $user){
+        // echo "<div class='user-profile'>
+        //           <div class='user-profile-pic'> <img src='$user['profile_picture']' alt=''> </div>
+        //           <div class='user-profile-name'>$user['fullName']</div>
+        //       </div>";
+        echo "<script>alert('ok');</script>";
+    //   }
+    // } catch (PDOException $e) {
+    //   echo "Error While Registering:<br>" . $e->getMessage();
+  // }
+      ?>
+        
 
       </div>
     </div>
 
     <div class="content">
-      <!-- Something -->
+      <div class="my-section">
+        <div class="search-post"></div>
+        <div class="post"></div>
+        <div class="my-profile image-fluid">
+          <div class="my-name"><?php echo $me['fullName'];?></div>
+          <img src="codernaccotax.png" alt="check">
+        </div>
+      </div>
+      <div class="check"></div>
     </div>
 
   </div>
