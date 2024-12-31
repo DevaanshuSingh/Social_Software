@@ -1,0 +1,43 @@
+.main-content{
+    display: flex;
+    margin: 20px;
+}
+
+.post-creation{
+    flex: 2;
+    margin-right: 20px;
+}
+
+.post-creation textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.feed{
+    flex: 3;
+}
+
+.post{
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar{
+    flex: 1;
+    margin-left: 20px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
