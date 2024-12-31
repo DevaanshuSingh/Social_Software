@@ -17,7 +17,8 @@
             <div class="inner-content">
                 <div class="texts">
                     <img src="codernaccotax.png" alt="CNAT_LOGO">
-                    <strong class="special-keys">CNAT(CODERNACCOTAX)</strong> Presents First Ever Social_Software!!<br>Here You Can Connect
+                    <strong class="special-keys">CNAT(CODERNACCOTAX)</strong> Presents First Ever
+                    Social_Software!!<br>Here You Can Connect
                     With People Easily, After Connecting You
                     Can Share Your Experience, Daily_Routine, Intrests, Things You Love, You Want Anything. <strong
                         class="special-keys">YES
@@ -70,8 +71,13 @@
     <script>
         function wrongInput() {
             // document.querySelector('.login-heading h1').innerHTML = "0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;";
-            document.querySelector('.login-heading h1').innerHTML = "<span><strong>LOGIN HERE:</strong></span><div class='face'>0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;</div>";
-            alert("Pleae Register First");
+            document.querySelector('.login-heading h1').innerHTML = "<span><strong>LOGIN HERE:</strong></span><div class='face'>o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;</div>";
+            // alert("Please Register First");
+            document.querySelector('.face').style.transition = "all 2s ease";
+            document.querySelector('.face').style.border = "none";
+            document.querySelector('.face').style.backgroundColor = "rgba(255, 0, 0, 0.25)";
+            document.querySelector('.face').style.borderRadius = "20%";
+
         };
 
         function correctInput() {
