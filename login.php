@@ -99,19 +99,23 @@ try {
         $email = $_POST['user-email'];
 
         foreach ($_POST as $posted) {
-            echo "$posted<br>";
+            echo "POST: $posted<br>";
         }
 
         $stmt = $pdo->prepare("SELECT * FROM users WHERE fullName=? AND userPassword=? AND email=?;");
         $stmt->execute([$fullName, $userPassword, $email]);
-        $userInfo = $stmt->fetchAll();
-        $loggedId = $userInfo[0]['id'];
-        if(!empty($userInfo)){
-            print_r($userInfo);
-            echo "Is ".$loggedId;
-        }
+        if($userInfo = $stmt->fetchAll())
+            echo "<h1>Worked</h1>";
         else
-            echo "Empty Hai $loggedId";
+            echo "<h1>Not Worked</h1>";
+
+            foreach ($userInfo as $key => $user) {
+                foreach ($user as $key => $value) {
+                    echo "<br>$key: $value";
+                }
+                echo "<br><strong>NEXT</strong>";
+            }
+        $loggedId = $userInfo[0]['id'];
         if ($userInfo) {
             echo "<form id='subitTheForm' action='use.php' method='GET'>
                     <input type='hidden' name='loggedPersonId' value='$loggedId'>

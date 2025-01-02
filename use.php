@@ -10,7 +10,7 @@ $me = $stmt->fetch();
 
 $get = $pdo->prepare("SELECT * FROM users;");
 $get->execute();
-$allUsers = $stmt->fetchAll();
+$allUsers = $get->fetchAll();
 ?>
 
 <!doctype html>
@@ -38,34 +38,47 @@ $allUsers = $stmt->fetchAll();
     <div class="users">
       <div class="show-user-profile-section">
 
-      <?php
-// try{
-      // forEach($allUsers as $user){
-        // echo "<div class='user-profile'>
-        //           <div class='user-profile-pic'> <img src='$user['profile_picture']' alt=''> </div>
-        //           <div class='user-profile-name'>$user['fullName']</div>
-        //       </div>";
-        echo "<script>alert('ok');</script>";
-    //   }
-    // } catch (PDOException $e) {
-    //   echo "Error While Registering:<br>" . $e->getMessage();
-  // }
-      ?>
-        
-
+        <?php
+        try {
+          for ($i = 0; $i < count($allUsers); $i++) {
+            echo "<div class='user-profile'>
+                  <div class='user-profile-pic'> <img src='' alt='CNAT'> </div>
+                  <div class='user-profile-name'>CNAT</div>
+              </div>";
+          }
+        } catch (PDOException $e) {
+          echo "Error While Registering:<br>" . $e->getMessage();
+        }
+        ?>
+        <!-- <div class='user-profile'>
+          <div class='user-profile-pic'> <img src='' alt='CNAT'> </div>
+          <div class='user-profile-name'>CNAT</div>
+        </div>
+        <div class='user-profile'>
+          <div class='user-profile-pic'> <img src='' alt='CNAT'> </div>
+          <div class='user-profile-name'>CNAT</div>
+        </div> -->
       </div>
     </div>
 
     <div class="content">
       <div class="my-section">
-        <div class="search-post"></div>
-        <div class="post"></div>
-        <div class="my-profile image-fluid">
-          <div class="my-name"><?php echo $me['fullName'];?></div>
-          <img src="codernaccotax.png" alt="check">
+        <div class="section search-post">
+          <div class="input-here">
+            <input type="text" placeholder="Search Post">
+            <i class="ri-search-line search-icon"></i>
+          </div>
+        </div>
+        <div class="section post"> <button>POST</button> </div>
+        <div class="section my-profile image-fluid">
+          <div class="my-name"><?php echo $me['fullName']; ?></div>
+          <img src="<?php echo $me['profile_picture'] ?>" alt="<?php echo $me['fullName']; ?>">
+          <div class="collapse-my-section"> <i onclick="toggleMySection()" class="collaps-icon ri-arrow-up-s-line"></i>
+          </div>
         </div>
       </div>
-      <div class="check"></div>
+      <div class="check">
+      </div>
     </div>
 
   </div>
@@ -94,6 +107,24 @@ $allUsers = $stmt->fetchAll();
       }
     }
 
+    let isMySectionOpen = true;
+    function toggleMySection() {
+      if (isMenuOpen === true) {
+        // alert(`GRK Closing`);
+        document.querySelector(".my-section").style.height = "0";
+        document.querySelector(".my-section").style.transition = "all 5s ease";
+        isMenuOpen = false;
+      } else {
+        // alert(`GRK Opening`);
+        document.querySelector(".menu").style.display = "flex";
+        document.querySelector(".menu").style.transition = "2s ease-in";
+        document.querySelector("body").style.gridTemplateColumns = "20% 80%";
+        document.querySelector("body").style.transition = "2s ease";
+        document.querySelector(".menu-icon").style.transform = "rotate(180deg)";
+        document.querySelector(".menu-icon").style.transition = "2s ease";
+        isMenuOpen = true;
+      }
+    }
   </script>
 </body>
 
