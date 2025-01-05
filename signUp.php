@@ -16,9 +16,10 @@
     </div>
 
     <div class="container">
-
         <div class="signup">
+
             <form action="register.php" method="POST" enctype="multipart/form-data">
+
                 <div class="single col-12">
                     <div class="mb-3 col-6">
                         <label for="full-name" class="form-label">Enter Full Name</label>
@@ -31,7 +32,6 @@
                             required>
                     </div>
                 </div>
-
                 <div class="single col-12">
                     <div class="mb-3 col-6">
                         <label for="password" class="form-label">Password</label>
@@ -44,7 +44,6 @@
                             required>
                     </div>
                 </div>
-
                 <div class="single col-12">
                     <div class="mb-3 col-6">
                         <label for="dob" class="form-label">Enter DOB</label>
@@ -56,7 +55,6 @@
                         <input type="text" class="form-control" id="bio" name="bio" placeholder="About" required>
                     </div>
                 </div>
-
                 <div class="single col-12">
                     <div class="mb-3 col-6">
                         <label for="intrests" class="form-label">Enter Intrests</label>
@@ -81,10 +79,12 @@
                         <button type="submit" class="btn">Register</button>
                     </div>
                 </div>
-            </form>
-        </div>
 
+            </form>
+
+        </div>
     </div>
+
 </body>
 
 </html>
