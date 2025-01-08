@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
 } */
 
 * {
-    margin: 0;
+    margin: 0 0;
     padding: 0;
     transition: all .9s ease;
     transition: all 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
@@ -27,10 +27,22 @@ body {
     width: 100vw;
     display: grid;
     grid-template-columns: 20% 80%;
-    overscroll-behavior: none; 
+    overscroll-behavior: none;
 }
 
-.menu{
+@media (width <=775px) {
+    body {
+        display: grid;
+        grid-template-columns: 45% 55%;
+    }
+
+    .users{
+        /* height: 20%; */
+    }
+
+}
+
+.menu {
     height: 100vh;
     /* width: 20vw; */
     background-color: rgba(103, 171, 216, 0.548);
@@ -43,7 +55,7 @@ body {
     /* border: 1px solid gold; */
 }
 
-.menu >.menu-button{
+.menu>.menu-button {
     height: 5%;
     width: 100%;
     display: flex;
@@ -52,13 +64,15 @@ body {
     font-size: xx-large;
     justify-content: space-evenly;
     /* background-color: red; */
+    z-index: 100;
 
-    &>.menu-icon{
+    &>.menu-icon {
         transform: rotate(180deg);
-        /* background-color: red; */
+        z-index: 100;
     }
 
-    &>.menu-icon:hover, &>span{
+    &>.menu-icon:hover,
+    &>span {
         color: blue;
         cursor: pointer;
     }
@@ -88,23 +102,28 @@ body {
 }
 
 .show-user-profile-section::-webkit-scrollbar {
-    height: 0.5vh; /* Fixed height */
-    width: 0.8vh;  /* Defined width */
+    height: 0.5vh;
+    /* Fixed height */
+    width: 0.8vh;
+    /* Defined width */
 }
 
 .show-user-profile-section::-webkit-scrollbar-track {
-    background: transparent; /* Track remains transparent */
+    background: transparent;
+    /* Track remains transparent */
 }
 
 .show-user-profile-section::-webkit-scrollbar-thumb {
-    background: rgba(0, 4, 255, 0.39); /* Thumb color */
-    border-radius: 10px; /* Smooth edges */
+    background: rgba(0, 4, 255, 0.39);
+    /* Thumb color */
+    border-radius: 10px;
+    /* Smooth edges */
 }
 
 .show-user-profile-section::-webkit-scrollbar-thumb:active {
-    background: rgb(0, 4, 255); /* Darker thumb color when active */
+    background: rgb(0, 4, 255);
+    /* Darker thumb color when active */
 }
-
 
 .user-profile {
     height: 95%;
@@ -112,14 +131,34 @@ body {
     border: 1px solid black;
     flex-shrink: 0;
     display: grid;
-    grid-template-rows: 1.5fr .5fr;
-}
-.user-profile > .user-profile-pic{
-    background-color: red;
+    grid-template-rows: 1.8fr .1fr;
+    margin: 0 .5%;
 }
 
-.user-profile > .user-profile-name{
+.user-profile>.user-profile-pic {
+    background-color: red;
+    /* opacity: 0; */
+    background-size: cover;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.user-profile>.user-profile-pic>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-profile>.user-profile-name {
+    height: 100%;
+    width: 100%;
     background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content {
@@ -131,40 +170,40 @@ body {
     grid-template-rows: 10% 89%;
     gap: 1%;
 
-    &>.my-section{
+    &>.my-section {
         background-color: rgba(77, 153, 104, 0.664);
     }
 
-    &>.check{
+    &>.check {
         background-color: black;
     }
 }
 
-.my-section{
+.my-section {
     background-color: rgba(77, 153, 104, 0.664);
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    &>.search-post{
+    &>.search-post {
         background-color: gold;
         width: calc(100%/3);
         height: 100%;
         border-right: 1px solid black;
 
-        &>.input-here{
+        &>.input-here {
             height: 100%;
             width: 100%;
             background-color: rgb(255, 255, 255);
 
-            &>input{
+            &>input {
                 width: 90%;
                 height: 100%;
                 /* background-color: rgba(37, 201, 179, 0.952); */
                 border: none;
             }
 
-            &>.search-icon{
+            &>.search-icon {
                 width: 10%;
                 height: 100%;
                 /* background-color: blue; */
@@ -173,7 +212,7 @@ body {
         }
     }
 
-    &>.post{
+    &>.post {
         /* background-color: skyblue; */
         height: 100%;
         width: calc(100%/3);
@@ -182,14 +221,14 @@ body {
         justify-content: center;
         border-right: 1px solid black;
 
-        &>button{
+        &>button {
             height: 100%;
             width: 50%;
             cursor: pointer;
         }
     }
 
-    &>.my-profile{
+    &>.my-profile {
         /* background-color: rgba(159, 0, 0, 0.664); */
         height: 100%;
         width: calc(100%/3);
@@ -197,7 +236,7 @@ body {
         align-items: center;
         justify-content: space-evenly;
 
-        &>.my-name{
+        &>.my-name {
             color: black;
             /* background-color: rgba(255, 255, 255, 0.2); */
             margin: 0 .2%;
@@ -208,7 +247,7 @@ body {
             justify-content: center;
         }
 
-        &>img{
+        &>img {
             height: 100%;
             width: 20%;
             object-fit: contain;
@@ -216,7 +255,7 @@ body {
             margin: 0 .2%;
         }
 
-        &>.collapse-my-section{
+        &>.collapse-my-section {
             /* background-color: rgba(255, 0, 0, 0.2); */
             height: 100%;
             width: 10%;
@@ -225,7 +264,7 @@ body {
             justify-content: center;
             font-size: 5vmin;
 
-            &>.collaps-icon{
+            &>.collaps-icon {
                 cursor: pointer;
             }
         }
