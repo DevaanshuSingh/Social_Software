@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     overscroll-behavior-y: none;
+
+    &::selection{
+        color: blue;
+        background-color: rgba(0, 0, 0, 0.541);
+    }
 }
 
 body {
@@ -33,7 +38,7 @@ body::-webkit-scrollbar-thumb {
 .main-container {
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.404);
+    background-color: rgba(0, 162, 255, 0.404);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,15 +46,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-container {
-    /* background-color: rgba(0, 0, 0, 0.288); */
+    background-color: rgba(0, 162, 255, 0.178);
     padding: 1%;
     transition: all 1s ease;
     height: 15%;
-    max-height: auto;
+    /* max-height: auto; */
     box-sizing: border-box;
 }
 
 .navbar {
+    background-color: rgba(255, 255, 255, 0.562) !important;
     width: 70%;
     height: auto;
     z-index: 2;
@@ -57,18 +63,19 @@ body::-webkit-scrollbar-thumb {
     transition: all 1s ease;
 }
 
-/*.rounded-circle {
+/* .rounded-circle {
     animation: round;
     animation-timeline: scroll();
 }
 
- @keyframes round {
+@keyframes round {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
-      }
-      100% {
+    }
+
+    100% {
         transform: translate(-50%, -50%) rotate(360deg);
-      }
+    }
 } */
 
 @media (max-width: 800px) {
@@ -106,7 +113,7 @@ body::-webkit-scrollbar-thumb {
 
 }
 
-.check-fluid >.content{
+.check-fluid>.content {
     width: 95%;
     height: 100%;
     /* background-color: rgba(255, 0, 0, 0.199); */
@@ -114,7 +121,7 @@ body::-webkit-scrollbar-thumb {
     overflow: auto;
     color: rgb(44, 47, 48);
 
-    &>.design{
+    &>.design {
         position: relative;
         left: 5;
         height: 5%;
@@ -125,13 +132,13 @@ body::-webkit-scrollbar-thumb {
         background: linear-gradient(180deg, rgb(55, 61, 143) 0%, rgba(57, 68, 133, 0.807) 98%); */
     }
 
-    &>.text{
+    &>.text {
         height: 100%;
         width: 100%;
         position: relative;
         /* background-color:rgba(0, 255, 13, 0.795); */
     }
-    
+
     &::-webkit-scrollbar {
         /* width: 8px; */
         width: 0;
@@ -143,6 +150,6 @@ body::-webkit-scrollbar-thumb {
 
     &::-webkit-scrollbar-thumb {
         background-color: #078fff;
-        background: linear-gradient(to bottom, rgb(0, 153, 255,0.5), rgba(0,0,255,0.5));
+        background: linear-gradient(to bottom, rgb(0, 153, 255, 0.5), rgba(0, 0, 255, 0.5));
     }
 }

@@ -30,10 +30,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="login.php">LOGIN</a>
+                <a class="nav-link text-dark" href="login.php"><strong>LOGIN</strong></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  text-warning" href="signUp.php">SIGN UP</a>
+                <a class="nav-link  text-dark" href="signUp.php"><strong>SIGN UP</strong></a>
               </li>
             </ul>
           </div>
