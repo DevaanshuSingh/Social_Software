@@ -66,6 +66,7 @@ if ($me && $allUsers) {
 
       <div class="content">
         <div class="my-section">
+          
         </div>
         <div class="check text-success">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam porro nisi nemo repellat placeat deserunt
