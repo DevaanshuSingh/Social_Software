@@ -38,7 +38,6 @@ if ($me && $allUsers) {
     <div class="container">
       <div class="users">
         <div class="show-user-profile-section">
-
           <?php
           try {
 
@@ -65,8 +64,12 @@ if ($me && $allUsers) {
       </div>
 
       <div class="content">
+<<<<<<< HEAD
         <div class="my-section">
           
+=======
+        <!-- <div class="my-section">
+>>>>>>> 1c5f98a8012e924871c89022ccf58b2cbf789216
         </div>
         <div class="check text-success">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam porro nisi nemo repellat placeat deserunt
@@ -118,7 +121,7 @@ if ($me && $allUsers) {
           repellendus est commodi sunt sapiente magnam minus, necessitatibus sed eaque reprehenderit beatae a. Accusamus
           maiores itaque omnis quasi sed magni, dolorum, perspiciatis repudiandae dolores laboriosam dolore explicabo,
           modi unde culpa mollitia nesciunt? Adipisci!
-        </div>
+        </div> -->
       </div>
     </div>
 
