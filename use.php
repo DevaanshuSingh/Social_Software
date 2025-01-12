@@ -44,8 +44,8 @@ if ($me && $allUsers) {
             //Generating user profiles
             foreach ($allUsers as $user) {
               echo "<div class='user-profile'>
-                  <div class='user-profile-pic'> <img src='" . $user['profile_picture'] . "' alt='".$user['userName']."'> </div>
-                  <div class='user-profile-name'><strong>".$user['userName']."</strong></div>
+                  <div class='user-profile-pic'> <img src='" . $user['profile_picture'] . "' alt='" . $user['userName'] . "'> </div>
+                  <div class='user-profile-name'><strong>" . $user['userName'] . "</strong></div>
               </div>";
             }
           } catch (PDOException $e) {
@@ -64,11 +64,8 @@ if ($me && $allUsers) {
       </div>
 
       <div class="content">
-<<<<<<< HEAD
         <div class="my-section">
-          
-=======
-        <!-- <div class="my-section">
+          <!-- <div class="my-section">
 >>>>>>> 1c5f98a8012e924871c89022ccf58b2cbf789216
         </div>
         <div class="check text-success">
@@ -122,6 +119,7 @@ if ($me && $allUsers) {
           maiores itaque omnis quasi sed magni, dolorum, perspiciatis repudiandae dolores laboriosam dolore explicabo,
           modi unde culpa mollitia nesciunt? Adipisci!
         </div> -->
+        </div>
       </div>
     </div>
 
@@ -138,15 +136,30 @@ if ($me && $allUsers) {
           document.querySelector(".menu-icon").style.transition = "2s ease-out";
           isMenuOpen = false;
         } else {
+          let bodyWidth = document.querySelector('body').offsetWidth;
           // alert(`GRK Opening`);
           document.querySelector(".menu").style.display = "flex";
           document.querySelector(".menu").style.transition = "2s ease-in";
+          if (bodyWidth <= 775)
+          document.querySelector("body").style.gridTemplateColumns = "45% 55%";
+            else
           document.querySelector("body").style.gridTemplateColumns = "20% 80%";
           document.querySelector("body").style.transition = "2s ease";
           document.querySelector(".menu-icon").style.transform = "rotate(180deg)";
           document.querySelector(".menu-icon").style.transition = "2s ease";
           isMenuOpen = true;
         }
+
+
+        //         let bodyWidth = document.querySelector('body').offsetWidth;
+        // document.querySelector(".menu").style.display = "flex";
+        // document.querySelector(".menu").style.transition = "2s ease-in";
+        // document.querySelector(".menu").style.opacity = "1";
+
+        // if (bodyWidth <= 775)
+        //   document.querySelector("body").style.gridTemplateColumns = "45% 55%";
+        // else
+        //   document.querySelector("body").style.gridTemplateColumns = "20% 80%";
       }
 
       let isMySectionOpen = true;
@@ -171,7 +184,7 @@ if ($me && $allUsers) {
   </body>
 
   </html>
-<?php
+  <?php
 } else {
   ?>
 
