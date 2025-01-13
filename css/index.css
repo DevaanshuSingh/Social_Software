@@ -4,7 +4,7 @@
     overscroll-behavior-y: none;
 
     &::selection{
-        color: blue;
+        color: rgb(226, 226, 248);
         background-color: rgba(0, 0, 0, 0.541);
     }
 }
