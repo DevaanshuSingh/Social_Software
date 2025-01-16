@@ -46,6 +46,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-container {
+    /* border: 1px solid black; */
     background-color: rgba(0, 162, 255, 0.178);
     padding: 1%;
     transition: all 1s ease;
@@ -84,8 +85,18 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+.collapse{
+    color: red;
+}
+
 .brand-name {
     color: rgb(95, 65, 228);
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .check-fluid {

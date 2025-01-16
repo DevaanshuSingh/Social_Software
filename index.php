@@ -28,7 +28,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav nav-list ms-auto">
               <li class="nav-item">
                 <a class="nav-link text-dark" href="login.php"><strong>LOGIN</strong></a>
               </li>
