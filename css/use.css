@@ -42,12 +42,22 @@ body {
     /* width: 20vw; */
     background-color: rgba(103, 171, 216, 0.548);
 }
-
+.main-container{
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+    /* border-right: 1px solid rgb(255, 0, 0); */
+}
 .container {
+    /* opacity: 0; */
     height: 100vh;
-    /* width: 80vw; */
+    /* width: auto; */
     /* background-color: rgba(255, 217, 0, 0.507); */
     /* border: 1px solid gold; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu>.menu-button {
@@ -73,52 +83,50 @@ body {
     }
 }
 
+.heading{
+    height: 5%;
+    width: 100%;
+    background-color: rgb(255, 72, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .users {
-    height: 25%;
+    height: 32.5%;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-
 .show-user-profile-section {
     width: 100%;
     height: 100%;
-    background-color: rgba(65, 158, 65, 0.384);
+    background-color: rgba(0, 81, 255, 0.384);
     display: flex;
     align-items: center;
     overflow: auto;
     overflow: scroll;
     /* padding: .1%; */
     overflow-y: hidden;
-}
-
-.show-user-profile-section::-webkit-scrollbar {
+}.show-user-profile-section::-webkit-scrollbar {
     height: 0.5vh;
     /* Fixed height */
     width: 0.8vh;
     /* Defined width */
-}
-
-.show-user-profile-section::-webkit-scrollbar-track {
+}.show-user-profile-section::-webkit-scrollbar-track {
     background: transparent;
     /* Track remains transparent */
-}
-
-.show-user-profile-section::-webkit-scrollbar-thumb {
+}.show-user-profile-section::-webkit-scrollbar-thumb {
     background: rgba(0, 4, 255, 0.39);
     /* Thumb color */
     border-radius: 10px;
     /* Smooth edges */
-}
-
-.show-user-profile-section::-webkit-scrollbar-thumb:active {
+}.show-user-profile-section::-webkit-scrollbar-thumb:active {
     background: rgb(0, 4, 255);
     /* Darker thumb color when active */
-}
-
-.user-profile {
+}.user-profile {
     height: 95%;
     width: 20vmax;
     border: 1px solid black;
@@ -126,9 +134,7 @@ body {
     display: grid;
     grid-template-rows: 1.8fr .1fr;
     margin: 0 .5%;
-}
-
-.user-profile>.user-profile-pic {
+}.user-profile>.user-profile-pic {
     background-color: red;
     /* opacity: 0; */
     background-size: cover;
@@ -137,28 +143,22 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-
-.user-profile>.user-profile-pic>img {
+}.user-profile>.user-profile-pic>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.user-profile>.user-profile-name {
+}.user-profile>.user-profile-name {
     height: 100%;
     width: 100%;
     background-color: yellow;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.content {
-    min-height: 75%;
+}.content {
+    min-height: 62.5%;
     height: auto;
     width: 100%;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(30, 255, 0);
     display: grid;
     grid-template-rows: 10% 89%;
     gap: 1%;
