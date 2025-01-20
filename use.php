@@ -94,7 +94,7 @@ if ($me && $allUsers) {
           document.querySelector(".menu-icon").style.transition = "2s ease";
           isMenuOpen = true;
         }
-
+        
 
         //         let bodyWidth = document.querySelector('body').offsetWidth;
         // document.querySelector(".menu").style.display = "flex";
