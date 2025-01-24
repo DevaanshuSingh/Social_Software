@@ -38,7 +38,7 @@ if ($me && $allUsers) {
 
       <div class="container">
         <div class="heading">
-          CNAT's SOSOFT
+          <span>CNAT's SOSOFT</span>
         </div>
         <div class="users">
           <div class="show-user-profile-section">
@@ -58,12 +58,9 @@ if ($me && $allUsers) {
             ?>
           </div>
         </div>
-
-        <div class="content">
-          <div class="my-section">
-            Self_Section
-          </div>
-        </div>
+        <!-- <div class="content"> -->
+          <div class="my-section">Self_Section</div>
+        <!-- </div> -->
       </div>
 
     </div>
