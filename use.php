@@ -32,7 +32,7 @@ if ($me && $allUsers) {
       <div class="menu-button">
         <i onclick="toggleMenu()" class="ri-arrow-right-circle-line menu-icon"></i>
       </div>
-      <div class="inside-menu"></div>
+      <div class="inside-menu"> </div>
     </div>
     <div class="main-container">
 

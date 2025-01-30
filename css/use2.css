@@ -2,24 +2,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-/* .users::-webkit-scrollbar {
-    width: 1vh100vh;
-}
-
-.users::-webkit-scrollbar-track {
-    background-color: rgb(211, 214, 224);
-}
-
-.users::-webkit-scrollbar-thumb {
-    background-color: rgb(59, 91, 230);
-    border-radius: 10%;
-} */
-
 * {
     margin: 0 0;
     padding: 0;
     transition: all .9s ease;
-    transition: all 2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    transition: all 2s ease;
 }
 
 body {
@@ -39,22 +26,25 @@ body {
 
 .menu {
     height: 100vh;
-    /* width: 20vw; */
     background-color: rgba(103, 171, 216, 0.548);
 }
-.main-container{
+
+.main-container {
     height: 100%;
     width: 100%;
     background-color: rgba(103, 171, 216, 0.9);
-    /* border: 1px solid rgb(255, 0, 0); */
 }
+
 .container {
+    /* opacity: 0; */
     height: 100vh;
     /* width: auto; */
-    /* display: flex;
+    /* background-color: rgba(255, 217, 0, 0.507); */
+    /* border: 1px solid gold; */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 
 .menu>.menu-button {
@@ -80,24 +70,22 @@ body {
     }
 }
 
-.heading{
+.heading {
     height: 5%;
     width: 100%;
-    /* background-color: rgb(255, 72, 0); */
+    background-color: rgb(255, 72, 0);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.users {
+}.users {
+    background-color: black;
     height: 32.5%;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
-.show-user-profile-section {
+}.show-user-profile-section {
     width: 100%;
     height: 100%;
     /* background-color: rgba(0, 81, 255, 0.384); */
@@ -155,22 +143,14 @@ body {
     min-height: 62.5%;
     height: auto;
     width: 100%;
-    /* background-color: rgb(30, 255, 0); */
+    background-color: rgb(30, 255, 0);
     display: grid;
     grid-template-rows: 10% 89%;
     gap: 1%;
-
-    &>.my-section {
-        /* background-color: rgba(77, 153, 104, 0.664); */
-    }
-
-    &>.check {
-        /* background-color: black; */
-    }
-}
-
-.my-section {
-    background-color: rgba(77, 153, 104, 0.664);
+}.my-section {
+    /* background-color: rgba(255, 255, 255, 0.507); */
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.26) 133%);
     display: flex;
     align-items: center;
     justify-content: space-between;

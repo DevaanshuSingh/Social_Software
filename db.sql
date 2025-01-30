@@ -1,3 +1,7 @@
+CREATE DATABASE `social_software`;
+
+USE `social_software`;
+
 CREATE TABLE `users` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `userName` varchar(255) NOT NULL,
@@ -11,3 +15,10 @@ CREATE TABLE `users` (
   `profile_picture` blob DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ;
+
+CREATE TABLE `posts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(50) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
+);
